@@ -1,0 +1,414 @@
+
+    
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --blanco:#EDF1D6;
+    --verde-claro:#9DC08B;
+    --verde-oscuro:#609966;
+    --marron:#40513B;
+    --alturaNav: 60px;
+}
+
+
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 500px, 300px, 200px, 200px, 200px, 80px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--blanco);
+}
+
+@keyframes alejo {
+
+    0% { color: white; }
+  
+    50% { color: var(--blanco); }
+  
+    100% { color: var(--blanco); }
+
+    
+  
+  }
+  #mobileNav{
+    list-style: none;
+    padding: 29px;
+    position: fixed;
+    left:100px;
+    top:20px;
+    background-color: #4d7737;
+}
+
+#mobileNav.open {
+    display: none;
+    
+}
+
+
+
+@media screen and (min-width:768px) {
+    #mobileNav {
+        display:none;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    #mobileNav {
+        display:block;
+    }
+    
+}
+
+    
+
+
+
+
+
+#BarraNav{
+    box-shadow: 0px 0px 0px 0px var(--gray3);
+}
+#BarraNav div{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #4d7737;
+    height:var(--alturaNav)}
+
+#BarraNav img{
+   
+    height:var(--alturaNav);
+    
+}
+#BarraNav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 12px;
+    padding: 0;
+    margin-left: auto;
+    align-items: center;
+    
+    
+}
+
+#BarraNav :hover{
+    color: burlywood;
+}
+
+#BarraNav ul li {
+    margin-left: 60px;
+    margin-right: 30px;
+    
+    
+}
+
+#BarraNav ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+#menu-icon {
+    display: none;
+   background-color: transparent;
+    font-size: 45px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    color: white;
+}
+
+
+
+
+
+    @media screen and (max-width: 768px) {
+        #menu-icon {
+            display:flex;
+            border-bottom: 15px; 
+        }
+        
+
+        #BarraNav ul {
+            display: block;
+            text-align: center;
+            margin-right: 70px;
+            display: none;    
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titulo  {
+    
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: white; /* ADD THIS LINE */
+    
+    /* Background styles */
+    background-image: url(https://i.postimg.cc/pVjW7XTt/fondo.jpg);width: 100%; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://i.postimg.cc/pVjW7XTt/fondo.jpg);
+    
+   
+
+    grid-row-start: 2;
+    grid-row-end: 3;   
+    
+}
+
+.titulo h1{
+    
+    
+    font-size: 9em;
+    color: var(--blanco);
+    text-align: center; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    
+
+    
+
+    
+}
+
+
+
+
+#Productos{
+   grid-row-start: 3;
+   grid-row-end: 4;
+    
+}
+#Productos h2{
+    margin-top: 50px;
+    font-size: 6em;
+    text-align: center;
+    color: #40513B;
+    
+}
+#Productos div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    
+
+}
+
+#Productos img{
+   
+    height: 400px;
+    width: 400px;
+    border: 200px;
+    border-radius: 10%;
+    
+}
+#Productos img :hover{
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+#Productos button{
+    background-color: #9DC08B;
+    margin:80px;
+    border: 0;
+    border-radius: 2%;
+    font-size: 30px;
+    transition: transform .2s;
+}
+
+#Productos button :hover{
+    cursor:pointer;
+    border-radius: 10%;
+    transform: scale(1.05);
+}
+
+#Productos p{
+    float: inherit;
+    color: #40513B;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    margin-inline-start: 5em;
+    margin-inline-end: 5em;
+    
+}
+#Productos hr{
+    border: 3px solid var(--marron);
+    
+}
+    
+
+#proyectos{
+    
+    grid-row-start: 4;
+    grid-row-end: 5; 
+    
+}
+#proyectos h2{
+    color: var(--marron);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 65px;
+    font-weight: 600;
+    text-align:center;
+}
+#proyectos h3{
+    color: var(--marron);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+    text-align: center;
+    
+}
+#proyectos .row{
+    border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+    
+
+}
+#proyectos .column{
+    display: inline-block;
+  
+  padding: 2rem 5rem;
+  vertical-align: middle;
+  font-size: 1.4em;
+  scale: 1;
+}
+#proyectos .column:hover{
+    cursor: pointer;
+    scale: 1.02;
+}
+#proyectos img{
+    border-radius: 5%;}
+
+
+
+
+
+
+
+#contacto{
+    
+    font-size: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--verde-claro);
+    grid-row-start: 5;
+   grid-row-end: 6;
+   
+}
+
+#contacto .form{
+  float: left;
+  
+  
+  
+}
+#contacto .imagen{
+    float: right;
+    position:absolute;
+    
+    
+}
+
+#contacto h3{
+    font-size: 56px;
+    text-align: center;
+    color: #40513B;
+    
+}
+
+#contacto p{
+    font-size: 30px;
+    text-align: center;
+    color: #40513B;
+    
+}
+#contacto form{
+    font-size: 30px;
+    text-align: center;
+    color: #40513B;
+}
+
+
+
+
+
+   
+
+.social-media{
+    clear: both;
+    display: flex;
+  flex-flow: row nowrap;
+    justify-content: center;
+    
+    
+    
+    grid-row-start: 5;
+   grid-row-end: 6;
+   background-color: #40513B;
+}
+.social-media a{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    opacity: 1;
+    vertical-align: middle;
+    align-items: center;
+    margin-left: 30px;
+    filter: sepia(100%);
+  -webkit-filter: sepia(100%);
+  border-radius: 30%;
+    
+
+}
+.social-media a :hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+
+
