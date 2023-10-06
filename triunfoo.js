@@ -4,13 +4,10 @@
     hamburger.addEventListener('click', () => {
         mobileNav.classList.toggle('open');
     });
-       
-
-
-
-
-
     
+
+
+    sdasd
 })()
 
 let navActiva= document.getElementById('mobileNav');
